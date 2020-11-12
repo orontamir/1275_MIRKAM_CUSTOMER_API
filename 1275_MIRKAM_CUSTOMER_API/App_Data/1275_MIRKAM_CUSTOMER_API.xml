@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>1275_MIRKAM_CUSTOMER_API</name>
+    </assembly>
+    <members>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.Controllers.CustomersController.Post(_1275_MIRKAM_CUSTOMER_API.Models.Customer)">
+            <summary>
+            Insert a new Customer in the Data Base
+            </summary>
+            <param name="value">New Customer insert to Mirkam Data Base</param>
+            <returns>OK is succeeded</returns>
+            <returns>Error code 403 , forbidden if not succeeded </returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.Controllers.CustomersController.Put(System.String,_1275_MIRKAM_CUSTOMER_API.Models.Customer)">
+            <summary>
+            Update customer with request id 
+            </summary>
+            <param name="id">Requst Id</param>
+            <param name="value">Customer details</param>
+            <returns>OK is succeeded</returns>
+            <returns>Error code 403 , forbidden if not succeeded </returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.Controllers.SubCustomersController.Post(_1275_MIRKAM_CUSTOMER_API.Models.SubCustomer)">
+            <summary>
+            Insert a new Sub Customer in the Data Base
+            </summary>
+            <param name="value">SubCustomer details</param>
+            <returns>OK is succeeded</returns>
+            <returns>Error code 403 , forbidden if not succeeded </returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.Controllers.SubCustomersController.Put(System.String,_1275_MIRKAM_CUSTOMER_API.Models.SubCustomer)">
+            <summary>
+            Update Sub customer with request id 
+            </summary>
+            <param name="id">Requst id</param>
+            <param name="value">Sub customer details</param>
+            <returns>OK is succeeded</returns>
+            <returns>Error code 403 , forbidden if not succeeded </returns>
+        </member>
+        <member name="P:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.TableName">
+            <summary>
+            the table name
+            </summary>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.Init">
+            <summary>
+            Init the members
+            </summary>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.SetCmd(System.String,System.String[])">
+            <summary>
+            Set the command
+            </summary>
+            <param name="command">Oracle query </param>
+            <param name="values">Params input query</param>
+            <returns>the command</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.SetCmd(System.String)">
+            <summary>
+            Set the command
+            </summary>
+            <param name="command">Oracle query </param>
+            <returns>the command</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.GetCmd">
+            <summary>
+            Get query command
+            </summary>
+            <param name="command">Oracle query </param>
+            <returns>the command</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.GetTextVal(System.String)">
+            <summary>
+            Get text value
+            </summary>
+            <param name="val">the value</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.GetBoolVal(System.Boolean)">
+            <summary>
+            Get boolian value
+            </summary>
+            <param name="val">the value</param>
+            <returns>return value</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.ReadString(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read string that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the string</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.ReadNotValidString(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read string that can be empty
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the string</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.ReadInt(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read int that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the int</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.ReadDateTime(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read date time that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the int</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.ReadDate(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read date  that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>date in string</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.ReadTime(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read time  that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>date in string</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DbCmd.ReadBool(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read boolean
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the boolean</returns>
+        </member>
+        <member name="F:_1275_MIRKAM_CUSTOMER_API.DataBase.DBParser.m_instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="F:_1275_MIRKAM_CUSTOMER_API.DataBase.DBParser.m_GeneralCmd">
+            <summary>
+            General command
+            </summary>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DBParser.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DBParser.Instance">
+            <summary>
+            Get the singleton instance
+            </summary>
+            <returns>The singleton instance</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DBParser.ReadString(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read string that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the string</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DBParser.ReadInt(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read int that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the int</returns>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.DBParser.ReadDateTime(System.Data.OracleClient.OracleDataReader,System.String)">
+            <summary>
+            read date time that must not be empty - if it is emty - set the valid data flag to be false
+            </summary>
+            <param name="curReader">the current reader</param>
+            <param name="clmName">the coulumn name</param>
+            <returns>the int</returns>
+        </member>
+        <member name="F:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.m_WhereKeyValue">
+            <summary>
+            Contains al key values
+            </summary>
+        </member>
+        <member name="F:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.m_UpdatedValue">
+            <summary>
+            Contains all update values
+            </summary>
+        </member>
+        <member name="F:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.m_ColumnsStr">
+            <summary>
+            string that contains all  commnads columns
+            </summary>
+        </member>
+        <member name="F:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.m_InsertvaluesStr">
+            <summary>
+            string that contains all insert commnads values
+            </summary>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.Init">
+            <summary>
+            Init the members
+            </summary>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.AddWhereKeyVal``1(System.String,``0)">
+            <summary>
+            Add where key value 
+            </summary>
+            <param name="clmName">the column name</param>
+            <param name="val">the value</param>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.AddUpdateValue``1(System.String,``0)">
+            <summary>
+            Add  value 
+            </summary>
+            <param name="clmName">the coulm name</param>
+            <param name="val">the value</param>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.AddInsertValue``1(System.String,``0)">
+            <summary>
+            Add insert value 
+            </summary>
+            <param name="clmName">the coulm name</param>
+            <param name="val">the value</param>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.AddColumnNameAndValue``1(System.String,``0)">
+            <summary>
+            Add column and vlaue for insert command
+            </summary>
+            <param name="clmName">the column name</param>
+            <param name="val">the value</param>
+        </member>
+        <member name="M:_1275_MIRKAM_CUSTOMER_API.DataBase.GeneralCmd.SetCmd(System.String,System.String[])">
+            <summary>
+            Get the command
+            </summary>
+            <returns>the command</returns>
+        </member>
+    </members>
+</doc>
